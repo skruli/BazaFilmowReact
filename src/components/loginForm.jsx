@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import { Link } from "react-router-dom";
 
 class LoginForm extends Component {
 
@@ -28,6 +28,10 @@ class LoginForm extends Component {
                               placeholder="Password"/>
                                           </div>
                    <button type="submit" className="btn btn-secondary mt-4 text-center">Zaloguj</button>
+                   <p class="mt-3"> Nie masz konta? </p>
+                    <Link to="/signup">
+                        <button type="submit" className="btn btn-outline-secondary text-center">Rejestracja</button>
+                    </Link>
                </form>
 
            </div>
