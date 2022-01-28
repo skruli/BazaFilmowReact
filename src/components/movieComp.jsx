@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MovieName from "./movieName";
-import MovieRating from "./movieRating";
 import MovieIMG from "./movieIMG"
-const FilmCard = () => {
-    return <div class="card shadow-sm m-3" style={{maxWidth:"20%", height:"auto",display:"flex"}}>
-    <div class="card-body">
-        <MovieName class="card-title"/>
-        <MovieRating class="card-text"/>
+
+const FilmCard = (props) => {
+
+  const link = "/details/" + props.id;
+
+    return <div className="card shadow-sm m-3" style={{maxWidth:"20%", height:"auto",display:"flex"}}>
+    <div className="card-body">
+        <MovieName title={props.title} className="card-title"/>
     </div>
-    <MovieIMG class="card-img-bottom"/>
-    <Link to="/details" class="mt-2 mb-2">
+    <MovieIMG image={props.image} className="card-img-bottom"/>
+    <Link to={link} className="mt-2 mb-2">
     <button type="submit" className="btn btn-outline-secondary text-center">+</button>
     </Link>
   </div>

@@ -1,7 +1,8 @@
 import React from "react";
 
-const MovieName = () => {
-    return <h1>Incepcja</h1>
+
+const MovieName = (props) => {
+    return <h4>{props.title}</h4>
 
 };
 
